@@ -4,7 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه اصلی</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://raw.githubusercontent.com/lalehhasapour/My-App-Images/refs/heads/main/1726450170450_92600af5b04334c0071034e72a0f31fc_2_3_photo.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .shadow-box {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .icons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .icon img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .icon img:hover {
+            transform: scale(1.1);
+        }
+
+        .icon p {
+            margin-top: 10px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,26 +84,27 @@
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگو" class="logo">
         </div>
 
-        <!-- آیکن‌ها -->
-        <div class="icons-container">
-            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/home-page-description_my-APP/')">
-                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="ایران‌کوین">
-                <p>ایران‌کوین</p>
-            </div>
-            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/gallary-web_APP/')">
-                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="نمونه کارها">
-                <p>نمونه کارها</p>
-            </div>
-            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/web-store_APP/')">
-                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فروشگاه">
-                <p>فروشگاه</p>
-            </div>
-            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/about-us_my-APP/')">
-                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="تماس و درباره‌ی ما">
-                <p>تماس و درباره‌ی ما</p>
+        <!-- جعبه با سایه -->
+        <div class="shadow-box">
+            <div class="icons-container">
+                <div class="icon" onclick="window.location.href='https://lalehhasapour.github.io/home-page-description_my-APP/'">
+                    <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="ایران‌کوین">
+                    <p>ایران‌کوین</p>
+                </div>
+                <div class="icon" onclick="window.location.href='https://lalehhasapour.github.io/gallary-web_APP/'">
+                    <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="نمونه کارها">
+                    <p>نمونه کارها</p>
+                </div>
+                <div class="icon" onclick="window.location.href='https://lalehhasapour.github.io/web-store_APP/'">
+                    <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فروشگاه">
+                    <p>فروشگاه</p>
+                </div>
+                <div class="icon" onclick="window.location.href='https://lalehhasapour.github.io/about-us_my-APP/'">
+                    <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="تماس و درباره‌ی ما">
+                    <p>تماس و درباره‌ی ما</p>
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
-                </html>
+</html>
