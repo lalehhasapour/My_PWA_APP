@@ -3,99 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ویب اپلیکیشن</title>
+    <title>Navigation Bar</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            direction: rtl;
+            font-family: Arial, sans-serif;
+            direction: rtl; /* تنظیم راست‌چین برای زبان فارسی */
         }
 
-        .header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header img {
-            width: 150px;
-        }
-
-        .content {
-            padding-top: 100px;
-            padding-bottom: 80px; /* To avoid overlap with nav */
-        }
-
-        .nav-bar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #333;
+        /* استایل برای نوار ناوبری */
+        .navbar {
             position: fixed;
             bottom: 0;
             width: 100%;
-            z-index: 1000;
-        }
-
-        .nav-bar a {
-            text-decoration: none;
-            color: white;
-            padding: 15px;
+            background-color: #ffffff;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 14px;
+            justify-content: space-around;
+            box-shadow: none; /* حذف سایه */
+            padding: 10px 0;
+            border-top: 1px solid #ccc; /* خط مرزی ساده بالای نوار ناوبری */
         }
 
-        .nav-bar a img {
+        /* استایل برای آیتم‌های نوار ناوبری */
+        .navbar a {
+            text-align: center;
+            flex-grow: 1;
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar img {
             width: 30px;
             height: 30px;
         }
 
-        .nav-bar a.active {
-            background-color: #555;
+        /* استایل برای زمانی که کاربر روی یک آیکون کلیک می‌کند */
+        .navbar a.active {
+            color: #4CAF50;
+        }
+
+        /* ریسپانسیو برای موبایل */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                font-size: 12px;
+            }
+
+            .navbar img {
+                width: 25px;
+                height: 25px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header with logo -->
-    <div class="header">
-        <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگوی اپلیکیشن">
-    </div>
-
-    <!-- Main content -->
-    <div class="content">
-        <h1>به اپلیکیشن من خوش آمدید</h1>
-        <p>لطفاً از نوار ناوبری برای دسترسی به صفحات مختلف استفاده کنید.</p>
-    </div>
-
-    <!-- Bottom navigation bar -->
-    <div class="nav-bar">
+    <!-- نوار ناوبری در پایین صفحه -->
+    <div class="navbar">
         <a href="https://lalehhasapour.github.io/home-page-description_my-APP/" class="active">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="ایران کوین">
-            <span>ایران کوین</span>
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون خانه">
         </a>
         <a href="https://lalehhasapour.github.io/web-store_APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فروشگاه">
-            <span>فروشگاه</span>
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون فروشگاه">
         </a>
         <a href="https://lalehhasapour.github.io/about-us_my-APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="تماس و درباره ما">
-            <span>تماس و درباره ما</span>
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون تماس">
         </a>
-        <a href="https://google.com/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فعال‌سازی اشتراک">
-            <span>فعال‌سازی اشتراک</span>
+        <a href="https://lalehhasapour.github.io/gallary-web_APP/">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون نمونه کارها">
         </a>
-        <a href="https://yahoo.com/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="امکانات آینده">
-            <span>امکانات آینده</span>
+        <a href="https://lalehhasapour.github.io/subscription-activation_APP/">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون فعال‌سازی">
         </a>
     </div>
 
