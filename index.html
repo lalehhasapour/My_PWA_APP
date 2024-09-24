@@ -3,96 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
-    <title>اپلیکیشن من</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" />
+    <title>ویب اپلیکیشن</title>
     <style>
-        * {
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://raw.githubusercontent.com/lalehhasapour/My-App-Images/refs/heads/main/1726449261960_aa102c5b0b2d8ff08cdbcea249326313_2_3_photo.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-        }
-        header {
             text-align: center;
-            padding: 20px;
+            direction: rtl;
         }
-        header img {
+
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header img {
             width: 150px;
         }
-        main {
-            min-height: calc(100vh - 60px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+        .content {
+            padding-top: 100px;
+            padding-bottom: 80px; /* To avoid overlap with nav */
         }
-        footer {
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
             position: fixed;
             bottom: 0;
             width: 100%;
-            display: flex;
-            justify-content: space-around;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
+            z-index: 1000;
         }
-        footer a {
-            color: white;
+
+        .nav-bar a {
             text-decoration: none;
-            text-align: center;
+            color: white;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-size: 14px;
         }
-        footer img {
+
+        .nav-bar a img {
             width: 30px;
-            display: block;
-            margin: 0 auto;
+            height: 30px;
+        }
+
+        .nav-bar a.active {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگو">
-    </header>
+    <!-- Header with logo -->
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگوی اپلیکیشن">
+    </div>
 
-    <main id="content">
-        <h1>ایران کوین</h1>
-        <p>به ایران کوین خوش آمدید.</p>
-    </main>
+    <!-- Main content -->
+    <div class="content">
+        <h1>به اپلیکیشن من خوش آمدید</h1>
+        <p>لطفاً از نوار ناوبری برای دسترسی به صفحات مختلف استفاده کنید.</p>
+    </div>
 
-    <footer>
-        <a href="https://lalehhasapour.github.io/home-page-description_my-APP/" onclick="loadPage('ایران کوین')">
+    <!-- Bottom navigation bar -->
+    <div class="nav-bar">
+        <a href="https://lalehhasapour.github.io/home-page-description_my-APP/" class="active">
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="ایران کوین">
-            ایران کوین
+            <span>ایران کوین</span>
         </a>
-        <a href="https://lalehhasapour.github.io/web-store_APP/" onclick="loadPage('فروشگاه')">
+        <a href="https://lalehhasapour.github.io/web-store_APP/">
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فروشگاه">
-            فروشگاه
+            <span>فروشگاه</span>
         </a>
-        <a href="https://lalehhasapour.github.io/about-us_my-APP/" onclick="loadPage('تماس و درباره ما')">
+        <a href="https://lalehhasapour.github.io/about-us_my-APP/">
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="تماس و درباره ما">
-            تماس و درباره ما
+            <span>تماس و درباره ما</span>
         </a>
-        <a href="https://google.com/" onclick="loadPage('فعال‌سازی اشتراک')">
+        <a href="https://google.com/">
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فعال‌سازی اشتراک">
-            فعال‌سازی اشتراک
+            <span>فعال‌سازی اشتراک</span>
         </a>
-        <a href="https://yahoo.com/" onclick="loadPage('امکانات آینده')">
+        <a href="https://yahoo.com/">
             <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="امکانات آینده">
-            امکانات آینده
+            <span>امکانات آینده</span>
         </a>
-    </footer>
-
-    <script>
-        function loadPage(pageName) {
-            document.getElementById('content').innerHTML = `<p>شما در صفحه ${pageName} هستید.</p>`;
-            event.preventDefault();
-        }
-    </script>
+    </div>
 
 </body>
-  </html>
+</html>
