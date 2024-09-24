@@ -3,79 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            direction: rtl; /* تنظیم راست‌چین برای زبان فارسی */
-        }
-
-        /* استایل برای نوار ناوبری */
-        .navbar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: none; /* حذف سایه */
-            padding: 10px 0;
-            border-top: 1px solid #ccc; /* خط مرزی ساده بالای نوار ناوبری */
-        }
-
-        /* استایل برای آیتم‌های نوار ناوبری */
-        .navbar a {
-            text-align: center;
-            flex-grow: 1;
-            text-decoration: none;
-            color: black;
-        }
-
-        .navbar img {
-            width: 30px;
-            height: 30px;
-        }
-
-        /* استایل برای زمانی که کاربر روی یک آیکون کلیک می‌کند */
-        .navbar a.active {
-            color: #4CAF50;
-        }
-
-        /* ریسپانسیو برای موبایل */
-        @media screen and (max-width: 600px) {
-            .navbar a {
-                font-size: 12px;
-            }
-
-            .navbar img {
-                width: 25px;
-                height: 25px;
-            }
-        }
-    </style>
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <!-- لوگوی بالای صفحه -->
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگو" class="logo">
+        </div>
 
-    <!-- نوار ناوبری در پایین صفحه -->
-    <div class="navbar">
-        <a href="https://lalehhasapour.github.io/home-page-description_my-APP/" class="active">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون خانه">
-        </a>
-        <a href="https://lalehhasapour.github.io/web-store_APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون فروشگاه">
-        </a>
-        <a href="https://lalehhasapour.github.io/about-us_my-APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون تماس">
-        </a>
-        <a href="https://lalehhasapour.github.io/gallary-web_APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون نمونه کارها">
-        </a>
-        <a href="https://lalehhasapour.github.io/subscription-activation_APP/">
-            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="آیکون فعال‌سازی">
-        </a>
+        <!-- آیکن‌ها -->
+        <div class="icons-container">
+            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/home-page-description_my-APP/')">
+                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="ایران‌کوین">
+                <p>ایران‌کوین</p>
+            </div>
+            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/gallary-web_APP/')">
+                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="نمونه کارها">
+                <p>نمونه کارها</p>
+            </div>
+            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/web-store_APP/')">
+                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="فروشگاه">
+                <p>فروشگاه</p>
+            </div>
+            <div class="icon" onclick="navigateTo('https://lalehhasapour.github.io/about-us_my-APP/')">
+                <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="تماس و درباره‌ی ما">
+                <p>تماس و درباره‌ی ما</p>
+            </div>
+        </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
-</html>
+                </html>
