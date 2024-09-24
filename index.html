@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>اپلیکیشن من</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://raw.githubusercontent.com/lalehhasapour/My-App-Images/refs/heads/main/1726449261960_aa102c5b0b2d8ff08cdbcea249326313_2_3_photo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 150px;
+        }
+        main {
+            min-height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+        footer img {
+            width: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b77f13f8_2_3_photo.png" alt="لوگو">
+    </header>
+
+    <main id="content">
+        <h1>ایران کوین</h1>
+        <p>به صفحه اصلی ایران کوین خوش آمدید.</p>
+    </main>
+
+    <footer>
+        <a href="https://lalehhasapour.github.io/home-page-description_my-APP/" onclick="loadPage('ایران کوین')">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b2_3_photo.png" alt="ایران کوین">
+            ایران کوین
+        </a>
+        <a href="https://lalehhasapour.github.io/web-store_APP/" onclick="loadPage('فروشگاه')">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b2_3_photo.png" alt="فروشگاه">
+            فروشگاه
+        </a>
+        <a href="https://lalehhasapour.github.io/about-us_my-APP/" onclick="loadPage('تماس و درباره ما')">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b2_3_photo.png" alt="تماس و درباره ما">
+            تماس و درباره ما
+        </a>
+        <a href="https://google.com/" onclick="loadPage('فعال‌سازی اشتراک')">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b2_3_photo.png" alt="فعال‌سازی اشتراک">
+            فعال‌سازی اشتراک
+        </a>
+        <a href="https://yahoo.com/" onclick="loadPage('امکانات آینده')">
+            <img src="https://raw.githubusercontent.com/lalehhasapour/logo-images_APP/refs/heads/main/1726971218716_c7ab39c64111fc45e489d0f2b2_3_photo.png" alt="امکانات آینده">
+            امکانات آینده
+        </a>
+    </footer>
+
+    <script>
+        function loadPage(pageName) {
+            document.getElementById('content').innerHTML = `<h1>${pageName}</h1><p>شما در صفحه ${pageName} هستید.</p>`;
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+  </html>
