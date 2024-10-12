@@ -1,52 +1,41 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحه اصلی وب‌سایت</title>
-    
-    <!-- لینک فایل CSS نوار ناوبری -->
-    <link rel="stylesheet" href="navbar.css">
-    
-    <!-- لینک Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+/* استایل نوار ناوبری */
+footer {
+  position: fixed; /* نوار ناوبری را به پایین صفحه ثابت می‌کند */
+  left: 0;
+  bottom: 0;
+  background: #1089ff; /* رنگ آبی نوار */
+  width: 100%; /* پهنای نوار برابر با پهنای صفحه */
+  height: 60px; /* ارتفاع نوار */
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* سایه در بالا */
+}
 
-    <!-- استایل برای محتوای اصلی وب‌سایت -->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('background.jpg'); /* تصویر پس‌زمینه اصلی */
-            background-size: cover;
-            background-position: center;
-            height: 100vh; /* ارتفاع کل صفحه */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
 
-        .content {
-            flex: 1;
-            padding: 20px;
-            color: #333;
-        }
-    </style>
-</head>
-<body>
+footer i {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
 
-    <!-- محتوای اصلی وب‌سایت -->
-    <div class="content">
-        <!-- محتوای صفحه اصلی وب‌سایت -->
-        <h1>به وب‌سایت من خوش آمدید</h1>
-        <p>این بخش مربوط به محتوای اصلی وب‌سایت شماست. از پس‌زمینه و استایل اصلی استفاده می‌کند.</p>
-    </div>
+/* استایل مخصوص صفحه‌های کوچک (Responsive) */
+@media screen and (max-width: 768px) {
+  footer {
+    height: 50px;
+  }
 
-    <!-- مکانی برای بارگذاری نوار ناوبری -->
-    <div id="navbar-placeholder"></div>
-
-    <!-- لینک فایل جاوااسکریپت جداگانه -->
-    <script src="script.js"></script>
-
-</body>
-</html>
+  footer i {
+    width: 20px;
+    height: 20px;
+  }
+}
