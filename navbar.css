@@ -1,67 +1,52 @@
-body {
-  background: aliceblue;
-}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه اصلی وب‌سایت</title>
+    
+    <!-- لینک فایل CSS نوار ناوبری -->
+    <link rel="stylesheet" href="navbar.css">
+    
+    <!-- لینک Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 
-* {
-  box-sizing: border-box;
-}
+    <!-- استایل برای محتوای اصلی وب‌سایت -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* تصویر پس‌زمینه اصلی */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* ارتفاع کل صفحه */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-a {
-  display: inline-flex;
-}
+        .content {
+            flex: 1;
+            padding: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
 
-.outerframe {
-  width: 100%;
-  max-width: 375px;
-  height: 667px;
-  position: relative;
-  background: #fff;
-  margin: 5% auto;
-  border-radius: 30px;
-  box-shadow: 30px 30px 80px rgba(0, 0, 0, 0.1), -20px -20px 60px rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-}
+    <!-- محتوای اصلی وب‌سایت -->
+    <div class="content">
+        <!-- محتوای صفحه اصلی وب‌سایت -->
+        <h1>به وب‌سایت من خوش آمدید</h1>
+        <p>این بخش مربوط به محتوای اصلی وب‌سایت شماست. از پس‌زمینه و استایل اصلی استفاده می‌کند.</p>
+    </div>
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: #1089ff;
-  width: 100%;
-  height: 80px;
-  padding: 0 24px;
-  border-radius: 30px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    <!-- مکانی برای بارگذاری نوار ناوبری -->
+    <div id="navbar-placeholder"></div>
 
-footer a {
-  color: #fff;
-}
+    <!-- لینک فایل جاوااسکریپت جداگانه -->
+    <script src="script.js"></script>
 
-footer i {
-  width: 24px;
-  height: 24px;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-@media screen and (max-width: 768px) {
-  .outerframe {
-    max-width: 100%;
-    height: auto;
-  }
-
-  footer {
-    height: 60px;
-  }
-
-  footer i {
-    width: 20px;
-    height: 20px;
-  }
-}
+</body>
+</html>
