@@ -242,10 +242,22 @@ body {
 </style>
 </head>
 <body>
-  
-<link rel="stylesheet" href="navbar.css">
+<!-- فایل navbar.html -->
+<div class="outerframe">
+    <footer>
+        <a href="#"><i data-feather="home"></i></a>
+        <a href="#"><i data-feather="box"></i></a>
+        <a href="#"><i data-feather="camera"></i></a>
+        <a href="#"><i data-feather="map-pin"></i></a>
+        <a href="#"><i data-feather="settings"></i></a>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace();  // فعال‌سازی آیکون‌های Feather
+</script>  
   <div id="navbar-placeholder"></div>
-  <script src="navbar.js"></script>
   
 <!-- partial:index.partial.html -->
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
@@ -393,6 +405,7 @@ body {
                         </div>
                 </div>
                 <div id="retrobg-groundShadow"></div>
+</script>
         </div>
         <div>
 </div>
