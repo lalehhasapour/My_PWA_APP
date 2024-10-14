@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - CSS text glitch effect (clip-path &amp; mix-blend-mode)</title>
-<style>
+<link rel="stylesheet" href="navbar.css">
+  <style>
 html,
 body {
         margin: 0;
@@ -398,6 +399,43 @@ document.querySelector("#retrobg-sun").onclick = () => {
         document.querySelector("#retrobg").classList.toggle("retrobg-shutdown");
 };
 </script>
-
+  <div class="navbar">
+	<ul class="navbar__list">
+		<li class="navbar__item navbar__item--active">
+			<a href="javascript:void(0);" class="navbar__link">
+				<i class="navbar__icon">
+					<ion-icon name="home-outline"></ion-icon>
+				</i>
+				<span class="navbar__text">Home</span>
+			</a>
+		</li>
+		<li class="navbar__item">
+			<a href="javascript:void(0);" class="navbar__link">
+				<i class="navbar__icon">
+					<ion-icon name="information-circle-outline"></ion-icon>
+				</i>
+				<span class="navbar__text">About</span>
+			</a>
+		</li>
+		<li class="navbar__item">
+			<a href="javascript:void(0);" class="navbar__link">
+				<i class="navbar__icon">
+					<ion-icon name="person-outline"></ion-icon>
+				</i>
+				<span class="navbar__text">Profile</span>
+			</a>
+		</li>
+		<li class="navbar__item">
+			<a href="javascript:void(0);" class="navbar__link">
+				<i class="navbar__icon">
+					<ion-icon name="settings-outline"></ion-icon>
+				</i>
+				<span class="navbar__text">Settings</span>
+			</a>
+		</li>
+		<li class="navbar__indicator"></li>
+	</ul>
+  </div>
+<script src="navbar.js"></script>
 </body>
 </html>
