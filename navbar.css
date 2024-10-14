@@ -19,18 +19,6 @@ html {
 	--primary-red: #ff3c41;
 }
 
-.navbar {
-	width: 360px;
-	height: 70px;
-	background: var(--primary-white);
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 10px;
-	padding: 0 20px;
-}
-
 .navbar__list {
 	list-style: none;
 	display: flex;
