@@ -19,14 +19,6 @@ html {
 	--primary-red: #ff3c41;
 }
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: var(--bg-default);
-}
-
 .navbar {
 	width: 360px;
 	height: 70px;
