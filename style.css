@@ -1,236 +1,105 @@
-
-html,
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Chelsea+Market&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-        margin: 0;
-        height: 100%;
+  background: black;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Chelsea Market", system-ui;
+  font-size: 34px;
 }
 
-/* ............................................................... */
-/* ............................................................... */
-/* ............................................................... */
-#retrobg {
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-        color: #a3c;
-        background-color: #000;
+.wrapper,
+.content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.intro {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff0000;
+/*   margin: 0 auto; */
 }
 
-/* ............................................................... */
-#retrobg-sky {
-        position: absolute;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        top: 0;
-        width: 100%;
-        height: 55%;
-        background: linear-gradient(#214 75%, #249);
+.intro h1 {
+  font-size: 40px;
+  font-family: "Beth Ellen", cursive;
+}
+.intro p  {
+    font-size: 60px;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: bolder;
 }
 
-/* ............................................................... */
-#retrobg-sunWrap {
-        position: relative;
-        width: 40%;
-        margin-bottom: -15%;
-}
-#retrobg-sun {
-        --glow-color: #d44;
-        padding-top: 100%;
-        border-radius: 50%;
-        background-image: linear-gradient(#fcdf11, #ff623f, #fe2085 50%);
-        box-shadow: 0 0 160px 80px var(--glow-color);
-        animation: 2s ease infinite alternate retrobg-sun-glow-anim;
-}
-.retrobg-shutdown #retrobg-sun {
-        background-image: linear-gradient(#000, #000 40%);
-        --glow-color: #000;
-}
-@keyframes retrobg-sun-glow-anim {
-        from {
-                box-shadow: 0 0 160px 80px var(--glow-color);
-        }
-        to {
-                box-shadow: 0 0 200px 95px var(--glow-color);
-        }
+.content {
+  overflow-x: hidden;
 }
 
-/* ............................................................... */
-#retrobg-stars {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+.content .section {
+  width: 100%;
+  height: 100vh;
 }
-.retrobg-star {
-        position: absolute;
-        border-radius: 50%;
-        width: 2px;
-        height: 2px;
-        background-color: #fff;
+.gradient-purple, gradient-blue {
+  height: 50vh;
 }
-
-/* ............................................................... */
-#retrobg-mountains {
-        position: absolute;
-        width: 100%;
-        height: 30%;
-}
-.retrobg-mountain {
-        position: absolute;
-        width: 30%;
-        height: 100%;
-        background-image: linear-gradient(#000 70%, #111 85%, #fff1);
-}
-#retrobg-mountains-left {
-        left: 0;
-        clip-path: polygon(
-                0% 100%,
-                0% 55%,
-                5% 60%,
-                10% 55%,
-                20% 50%,
-                25% 42%,
-                30% 38%,
-                33% 35%,
-                40% 45%,
-                50% 50%,
-                60% 70%,
-                70% 85%,
-                75% 82%,
-                80% 91%,
-                85% 90%,
-                90% 95%,
-                95% 98%,
-                100% 100%
-        );
-}
-#retrobg-mountains-right {
-        right: 0;
-        clip-path: polygon(
-                0% 100%,
-                5% 95%,
-                10% 85%,
-                15% 87%,
-                20% 80%,
-                25% 78%,
-                30% 65%,
-                40% 70%,
-                50% 57%,
-                60% 53%,
-                67% 68%,
-                70% 70%,
-                75% 66%,
-                80% 55%,
-                90% 50%,
-                95% 60%,
-                100% 57%,
-                100% 100%
-        );
+.content .section.hero {
+  background-image: url(https://images.unsplash.com/photo-1512747646639-ed824d861e0d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: opacity 0.5s ease;
 }
 
-/* ............................................................... */
-#retrobg-cityWrap {
-        position: absolute;
-        width: 50%;
-        margin-left: -1%;
-}
-#retrobg-city {
-        padding-top: 20%;
-}
-.retrobg-building {
-        position: absolute;
-        width: 5%;
-        height: 100%;
-        bottom: 0;
-        border-radius: 4px 4px 0 0;
-        background-image: linear-gradient(0deg, rgba(17, 17, 34, 0), #112 30px, #000);
-}
-.retrobg-building:nth-child(odd) {
-        background-image: linear-gradient(0deg, rgba(24, 24, 42, 0), #223 30px, #000);
-}
-.retrobg-antenna::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        margin-left: calc(-1px - 5%);
-        bottom: 100%;
-        width: 10%;
-        min-width: 2px;
-        height: 33%;
-        background-color: #000;
+
+.image-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  perspective: 500px;
+  overflow: hidden;
 }
 
-/* ............................................................... */
-#retrobg-ground {
-        position: absolute;
-        overflow: hidden;
-        width: 100%;
-        height: 45%;
-        bottom: 0;
-        border-top: 2px solid #bf578c;
-        background-color: #000;
-}
-.retrobg-shutdown #retrobg-ground {
-        border-color: #000;
-}
-#retrobg-groundShadow {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(#000 0%, transparent);
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  z-index: 1;
 }
 
-/* ............................................................... */
-#retrobg-linesWrap {
-        height: 100%;
-        perspective: 1000px;
-        perspective-origin: center top;
-}
-#retrobg-lines {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform-origin: top center;
-        animation: 0.35s linear infinite retrobg-lines-anim;
-}
-.retrobg-shutdown #retrobg-lines {
-        animation-duration: 5s;
-}
-@keyframes retrobg-lines-anim {
-        from {
-                transform: rotateX(84deg) translateY(0);
-        }
-        to {
-                transform: rotateX(84deg) translateY(100px);
-        }
-}
-#retrobg-hlines,
-#retrobg-vlines {
-        position: absolute;
-        left: calc((900% - 100%) / -2);
-        width: 900%;
-        height: 500%;
-}
-#retrobg-vlines {
-        display: flex;
-        justify-content: center;
-}
-.retrobg-hline,
-.retrobg-vline {
-        width: 100%;
-        height: 100%;
-        background-color: currentColor;
-}
-.retrobg-hline {
-        height: 3px;
-}
-.retrobg-vline {
-        width: 3px;
-}
-.retrobg-hline + .retrobg-hline {
-        margin-top: 98px;
-}
-.retrobg-vline + .retrobg-vline {
-        margin-left: 48px;
+
+.test {
+  position: relative;
+  color: white;
+  top: -30px;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 45px;
+  color: #ff9605c4;
 }
